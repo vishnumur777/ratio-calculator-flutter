@@ -120,8 +120,8 @@ Widget buildInput1() => TextField(
       style: TextStyle(color: Colors.white),
       decoration: InputDecoration(
         hintText: "Enter a number",
-        labelText: "Paint",
-        prefixIcon: Icon(MyFlutterApp.format_paint),
+        labelText: "Component-A",
+        prefixIcon: Icon(MyFlutterApp.format_shapes),
         fillColor: Colors.white,
         border: OutlineInputBorder(),
       ),
@@ -134,8 +134,8 @@ Widget buildInput2() => TextField(
       style: TextStyle(color: Colors.white),
       decoration: InputDecoration(
         hintText: "Enter a number",
-        labelText: "Hardener",
-        prefixIcon: Icon(MyFlutterApp.brandy_bottle),
+        labelText: "Component-B",
+        prefixIcon: Icon(MyFlutterApp.format_bold),
         border: OutlineInputBorder(),
       ),
       keyboardType: TextInputType.number,

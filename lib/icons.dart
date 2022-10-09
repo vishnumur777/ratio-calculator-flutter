@@ -6,8 +6,6 @@ class MyFlutterApp {
   static const _kFontFam = 'MyFlutterApp';
   static const String? _kFontPkg = null;
 
-  static const IconData format_paint =
-      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData brandy_bottle =
-      IconData(0xe943, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData format_shapes = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData format_bold = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

@@ -15,9 +15,11 @@ int gcd_cal(int a, int b) {
 }
 
 String calculate() {
-  int a = int.parse(myControl1.text);
-  int b = int.parse(myControl2.text);
-  int res1 = (a / gcd_cal(a, b)).round();
-  int res2 = (b / gcd_cal(a, b)).round();
+  double a = double.parse(myContr1.text);
+  double b = double.parse(myContr2.text);
+  int a1 = (a * 1000.0).toInt();
+  int b1 = (b * 1000.0).toInt();
+  int res1 = (a1 / gcd_cal(a1, b1)).round();
+  int res2 = (b1 / gcd_cal(a1, b1)).round();
   return res1.toString() + " : " + res2.toString();
 }
