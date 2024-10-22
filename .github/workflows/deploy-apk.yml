@@ -1,0 +1,34 @@
+name: Flutter APK build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter SDK
+        uses: flutter-actions/setup-flutter@v3
+        with:
+          channel: stable
+          version: 3.0.2
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project source
+        run: dart analyze
+
+      - name: Build APK file
+        run: flutter build apk --build-name 1.0 --build-number 1
+
+      - name: Add to release tag
+        uses: sangatdesai/release-apk@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          APP_FOLDER: build/app/outputs/
