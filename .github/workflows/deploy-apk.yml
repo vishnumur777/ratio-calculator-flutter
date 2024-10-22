@@ -27,8 +27,15 @@ jobs:
       - name: Build APK file
         run: flutter build apk
         
-      - name: Add to release tag
-        uses: sangatdesai/release-apk@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          APP_FOLDER: build/app/outputs/flutter-apk/app-release.apk
+      # - name: Add to release tag
+      #   uses: sangatdesai/release-apk@main
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      #     APP_FOLDER: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+            artifacts: build/app/outputs/flutter-apk/app-release.apk
+            tag: v0.0.1
+            token: $ {{ secrets.TOKEN }}
