@@ -6,9 +6,9 @@ import 'package:ratiocalci/icons.dart';
 
 void main() => runApp(myApp());
 
-class myApp extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  _myApp createState() => _myApp();
+  _MyAppState createState() => _MyAppState();
 }
 
 final myControl1 = TextEditingController();
@@ -17,7 +17,7 @@ final myControl2 = TextEditingController();
 String result = "";
 bool should = false;
 
-class _myApp extends State<myApp> {
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) => Center(
         child: MaterialApp(
