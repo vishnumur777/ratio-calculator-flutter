@@ -1,3 +1,3 @@
 # ratiocalci
 
-An app to calculate ratio by giving two numbers.
+An Simple app to calculate ratio by giving two numbers.
