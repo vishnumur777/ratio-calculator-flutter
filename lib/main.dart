@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ratiocalci/calcul.dart';
 import 'package:ratiocalci/icons.dart';
 
-void main() => runApp(myApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
   @override
